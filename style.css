@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    display: flex;
+}
+
+#photo-logo {
+    background-image: url(NEOM.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 35%;
+    height: 100vh;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-area {
+    width: 65%;
+}
+
+@media screen and (max-width: 768px){
+    #photo-logo {
+        display: none;
+    }
+    
+    #form-area {
+        width: 100%;
+    }
+}
+
+@font-face {
+    font-family: 'NorseFont';
+    src: url('Norse-Bold.otf') format('opentype');
+}
+
+#logo {
+    background-image: url(odin-lined.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 140px;
+    height: 140px;
+}
+
+#text-container {
+    font-size: 139px;
+    font-family: 'NorseFont', sans-serif;
+    color: aliceblue;
+    padding-right: 15px;
+}
+
+#logo, 
+#text-container {
+    margin-bottom: 45vh;
+    background-color: black;
+    background-color: rgba(0, 0, 0, .50);
+    flex: 1 1 auto;
+}
