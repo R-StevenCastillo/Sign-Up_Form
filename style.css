@@ -1,27 +1,25 @@
 * {
     padding: 0;
     margin: 0;
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
     display: flex;
 }
 
+/* LEFT SIDE */
+
 #photo-logo {
     background-image: url(NEOM.jpg);
     background-size: cover;
     background-position: center;
-    width: 35%;
+    width: 40%;
     height: 100vh;
     float: left;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#form-area {
-    width: 65%;
 }
 
 @media screen and (max-width: 768px){
@@ -61,4 +59,129 @@ body {
     background-color: black;
     background-color: rgba(0, 0, 0, .50);
     flex: 1 1 auto;
+}
+
+/* FORM AREA */
+
+#form-area {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    padding-bottom: 5%;
+    padding-top: 7%;
+}
+
+#submit-data {
+    width: 80%;
+}
+
+#slogan {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'NorseFont', sans-serif;
+    text-align: center;
+}
+
+#user-names,
+#contact-data,
+#user-password {
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+legend {
+    font-family: 'NorseFont', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 1.2em;
+}
+
+fieldset {
+    border: none;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    font-size: large;
+    width: 15em;
+    height: 25px;
+    padding-left: 5px;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 2px solid #e4272a;
+    color: #e4272a;
+    box-shadow: none;
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+    border: 2px solid #1ab91a;
+    box-shadow: none;
+}
+
+/* BUTTON */
+#submit-btn {
+  align-items: center;
+  background-image: linear-gradient(144deg, #0079be, #35a6cc 50%, #00eaff);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#submit-btn:active,
+#submit-btn:hover {
+  outline: 0;
+}
+
+#submit-btn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  font-family: 'NorseFont', sans-serif;
+}
+
+#submit-btn:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  #submit-btn {
+    font-size: 24px;
+    min-width: 196px;
+  }
 }
